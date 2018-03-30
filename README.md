@@ -1,4 +1,4 @@
-<!-- mpl-rust by NewForester:  notes and examples of Rust -->
+<!-- mpl-rust by NewForester:  programming notes on and examples in Rust -->
 
 # MPL Rust
 
