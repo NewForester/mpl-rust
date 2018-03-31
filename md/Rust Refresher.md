@@ -39,6 +39,78 @@ Rust has a package and build automation system named Cargo.
 
 The official web-site is [https://www.rust-lang.org/](www.rust-lang.org).
 
+## Installation, Upgrade, Removal
+
+### Installation
+
+Rust is available from Debian repositories from 'stretch' onwards but Cargo is only available from 'buster' onwards.
+As always with such things, the repositories do not have the current versions.
+Best to install the latest stable version from the Rust project.
+
+#### Officially
+
+For *nix systems:
+
+```bash
+    $ curl https://sh.rustup.rs -sSf | sh
+```
+
+after first installing `curl`.
+Installation is to ~/.cargo/bin and it alters your profile.
+
+The command executes a small shell script that downloads the `rust` installer.
+It will issue a single confirmation prompt.
+Press enter.
+
+After confirmation, the install appears to download and install components.
+The four downloads are the order of 110 Mb in total and the final install 560 Mb but
+the installation requires more than this.
+
+Under the _.cargo_ directory are installed 9 binaries but this is all.
+The bulk of the installation (including the tool chain) is under _.rustup_.
+
+#### Alternatively
+
+If you are installing language tools on another volume:
+
+```bash
+    $ mkdir /media/work/lang/rust;
+    $ sudo ln -s /media/work/lang/rust/ /usr/local;
+    $ ln -s /usr/local/rust .cargo;
+
+    $ mkdir /media/work/lang/rustup;
+    $ ln -s /media/work/lang/rustup/ .rustup;
+
+    $ curl https://sh.rustup.rs -sSf | sh;
+```
+
+#### Binaries
+
+You do not need to alter your PATH if _/usr/local/bin_ is already on it:
+
+```bash
+    $ sudo ln -s /usr/local/rust/bin/* /usr/local/bin;
+```
+
+There are nine binaries.
+
+### Upgrade
+
+<!-- More detail from practical experience -->
+Use `rustup`.
+
+### Removal
+
+This installation claims:
+
+```
+    $ rustup self uninstall;
+```
+
+is all that is needed.
+
+Do not forget to tidy your PATH.
+
 ---
 
 *mpl-rust* by NewForester.

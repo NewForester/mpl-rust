@@ -15,6 +15,37 @@
 <p>The use of 'traits' to implement polymorphism allows structural type checking at compile time but still involves separate, optimised, code for each instantiation.</p>
 <p>Rust has a package and build automation system named Cargo.</p>
 <p>The official web-site is <a href="www.rust-lang.org">https://www.rust-lang.org/</a>.</p>
+<h2 id="installation-upgrade-removal">Installation, Upgrade, Removal</h2>
+<h3 id="installation">Installation</h3>
+<p>Rust is available from Debian repositories from 'stretch' onwards but Cargo is only available from 'buster' onwards. As always with such things, the repositories do not have the current versions. Best to install the latest stable version from the Rust project.</p>
+<h4 id="officially">Officially</h4>
+<p>For *nix systems:</p>
+<pre class="sourceCode bash"><code class="sourceCode bash">    $ curl https://sh.rustup.rs -sSf <span class="kw">|</span> <span class="kw">sh</span></code></pre>
+<p>after first installing <code>curl</code>. Installation is to ~/.cargo/bin and it alters your profile.</p>
+<p>The command executes a small shell script that downloads the <code>rust</code> installer. It will issue a single confirmation prompt. Press enter.</p>
+<p>After confirmation, the install appears to download and install components. The four downloads are the order of 110 Mb in total and the final install 560 Mb but the installation requires more than this.</p>
+<p>Under the <em>.cargo</em> directory are installed 9 binaries but this is all. The bulk of the installation (including the tool chain) is under <em>.rustup</em>.</p>
+<h4 id="alternatively">Alternatively</h4>
+<p>If you are installing language tools on another volume:</p>
+<pre class="sourceCode bash"><code class="sourceCode bash">    $ <span class="kw">mkdir</span> /media/work/lang/rust;
+    $ <span class="kw">sudo</span> <span class="kw">ln</span> -s /media/work/lang/rust/ /usr/local;
+    $ <span class="kw">ln</span> -s /usr/local/rust .cargo;
+
+    $ <span class="kw">mkdir</span> /media/work/lang/rustup;
+    $ <span class="kw">ln</span> -s /media/work/lang/rustup/ .rustup;
+
+    $ curl https://sh.rustup.rs -sSf <span class="kw">|</span> <span class="kw">sh</span>;</code></pre>
+<h4 id="binaries">Binaries</h4>
+<p>You do not need to alter your PATH if <em>/usr/local/bin</em> is already on it:</p>
+<pre class="sourceCode bash"><code class="sourceCode bash">    $ <span class="kw">sudo</span> <span class="kw">ln</span> -s /usr/local/rust/bin/* /usr/local/bin;</code></pre>
+<p>There are nine binaries.</p>
+<h3 id="upgrade">Upgrade</h3>
+<p><!-- More detail from practical experience --> Use <code>rustup</code>.</p>
+<h3 id="removal">Removal</h3>
+<p>This installation claims:</p>
+<pre><code>    $ rustup self uninstall;</code></pre>
+<p>is all that is needed.</p>
+<p>Do not forget to tidy your PATH.</p>
 <hr />
 <p><em>mpl-rust</em> by NewForester. Notes licensed under a Creative Commons Attribution-ShareAlike 4.0 International Licence.</p>
 <!-- EOF -->
