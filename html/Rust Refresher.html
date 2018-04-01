@@ -46,6 +46,27 @@
 <pre><code>    $ rustup self uninstall;</code></pre>
 <p>is all that is needed.</p>
 <p>Do not forget to tidy your PATH.</p>
+<h2 id="platform-documentation">Platform Documentation</h2>
+<h3 id="online">Online</h3>
+<p>Is too early to comment on the standard and style of Rust documentation online. I am not enjoying the book I am reading and I found the documentation for the <code>chrono</code> crate unhelpful.</p>
+<p>The Rust project documentation is available here: <a href="https://www.rust-lang.org/en-US/documentation.html/">www.rust-lang.org/en-US/documentation.html</a>. This appears to be a description of what is rather than an index to a well organised documentation set.</p>
+<p>The standard library documentation is under <a href="https://doc.rust-lang.org/std/">doc.rust-lang.org/std</a> and documentation for all published Rust crates is here: <a href="https://docs.rs/">docs.rs/</a>. The former is documentation, the latter a search engine.</p>
+<h3 id="offline">Offline</h3>
+<p>Rust documentation is all html based so you need a browser but not necessary Internet access.</p>
+<h4 id="rust-documentation">Rust Documentation</h4>
+<p>The Rust Book (in fact a set of books), documentation for the standard library and other documentation are installed by default. You can find them under <em>$RUSTUP/toolchains/stable-x86_64-unknown-linux-gnu/share/doc/rust/</em> but the most important can be access conveniently by running:</p>
+<pre class="sourceCode bash"><code class="sourceCode bash">    rustup doc</code></pre>
+<p>which opens a top-level page in your default browser.</p>
+<pre class="sourceCode bash"><code class="sourceCode bash">    rustup <span class="kw">man</span> <span class="kw">&lt;</span>rust_command<span class="kw">&gt;</span></code></pre>
+<p>can be used to generate man style pages for the Rust commands that have more information than</p>
+<pre class="sourceCode bash"><code class="sourceCode bash">    <span class="kw">&lt;</span>run_command<span class="kw">&gt;</span> --help</code></pre>
+<h4 id="cargo-crate-documentation">Cargo Crate Documentation</h4>
+<p>For your projects,</p>
+<pre class="sourceCode bash"><code class="sourceCode bash">    cargo doc --open</code></pre>
+<p>will generate documentation not just for your code but also for all dependencies. While this requires Internet access, the documentation generated does not.</p>
+<p>You can narrow this down to a specific dependency with:</p>
+<pre class="sourceCode bash"><code class="sourceCode bash">    cargo doc --open --package foo</code></pre>
+<p>For crates not installed, you need to visit <a href="https://docs.rs/">docs.rs</a>.</p>
 <hr />
 <p><em>mpl-rust</em> by NewForester. Notes licensed under a Creative Commons Attribution-ShareAlike 4.0 International Licence.</p>
 <!-- EOF -->

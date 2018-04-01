@@ -111,6 +111,66 @@ is all that is needed.
 
 Do not forget to tidy your PATH.
 
+
+## Platform Documentation
+
+### Online
+
+Is too early to comment on the standard and style of Rust documentation online.
+I am not enjoying the book I am reading and I found the documentation for the `chrono` crate unhelpful.
+
+The Rust project documentation is available here: [www.rust-lang.org/en-US/documentation.html](https://www.rust-lang.org/en-US/documentation.html/).
+This appears to be a description of what is rather than an index to a well organised documentation set.
+
+The standard library documentation is under [doc.rust-lang.org/std](https://doc.rust-lang.org/std/) and
+documentation for all published Rust crates is here: [docs.rs/](https://docs.rs/).
+The former is documentation, the latter a search engine.
+
+### Offline
+
+Rust documentation is all html based so you need a browser but not necessary Internet access.
+
+#### Rust Documentation
+
+The Rust Book (in fact a set of books), documentation for the standard library and other documentation are installed by default.
+You can find them under _$RUSTUP/toolchains/stable-x86_64-unknown-linux-gnu/share/doc/rust/_ but
+the most important can be access conveniently by running:
+
+```bash
+    rustup doc
+```
+
+which opens a top-level page in your default browser.
+
+```bash
+    rustup man <rust_command>
+```
+
+can be used to generate man style pages for the Rust commands that have more information than
+
+```bash
+    <run_command> --help
+```
+
+#### Cargo Crate Documentation
+
+For your projects,
+
+```bash
+    cargo doc --open
+```
+
+will generate documentation not just for your code but also for all dependencies.
+While this requires Internet access, the documentation generated does not.
+
+You can narrow this down to a specific dependency with:
+
+```bash
+    cargo doc --open --package foo
+```
+
+For crates not installed, you need to visit [docs.rs](https://docs.rs/).
+
 ---
 
 *mpl-rust* by NewForester.
