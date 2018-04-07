@@ -76,10 +76,10 @@ If you are installing language tools on another volume:
 ```bash
     $ mkdir /media/work/lang/rust;
     $ sudo ln -s /media/work/lang/rust/ /usr/local;
-    $ ln -s /usr/local/rust .cargo;
+    $ ln -s /usr/local/rust ~/.cargo;
 
     $ mkdir /media/work/lang/rustup;
-    $ ln -s /media/work/lang/rustup/ .rustup;
+    $ ln -s /media/work/lang/rustup/ ~/.rustup;
 
     $ curl https://sh.rustup.rs -sSf | sh;
 ```
@@ -170,6 +170,27 @@ You can narrow this down to a specific dependency with:
 ```
 
 For crates not installed, you need to visit [docs.rs](https://docs.rs/).
+
+
+## Learning Materials
+
+The definitive work appears to be [The Rust Programming Language](https://doc.rust-lang.org/book/second-edition/).
+This comes with the standard Rust installation so you do not have to be online to read.
+
+The Rust Tutorial has been deprecated in favour of the book and
+the [Rust by Example](https://rustbyexample.com/) site has been down recently.
+
+There is a list of Rust tutorials (etc.) on [hackr.io](https://hackr.io/tutorials/learn-rust).
+None stand out.
+
+There is no Rust Wikibook.
+
+There are [Rust Koans](https://github.com/crazymykl/rust-koans) on GitHub (there is another repository there).
+These appears to cover a reasonable number of topics.
+The respository dates from 2015 and the most recent commit was 2017 Q4.
+
+The [Exercism Rust Track](http://exercism.io/languages/rust/about) has 79 exercises.
+
 
 ---
 

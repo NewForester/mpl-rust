@@ -29,10 +29,10 @@
 <p>If you are installing language tools on another volume:</p>
 <pre class="sourceCode bash"><code class="sourceCode bash">    $ <span class="kw">mkdir</span> /media/work/lang/rust;
     $ <span class="kw">sudo</span> <span class="kw">ln</span> -s /media/work/lang/rust/ /usr/local;
-    $ <span class="kw">ln</span> -s /usr/local/rust .cargo;
+    $ <span class="kw">ln</span> -s /usr/local/rust ~/.cargo;
 
     $ <span class="kw">mkdir</span> /media/work/lang/rustup;
-    $ <span class="kw">ln</span> -s /media/work/lang/rustup/ .rustup;
+    $ <span class="kw">ln</span> -s /media/work/lang/rustup/ ~/.rustup;
 
     $ curl https://sh.rustup.rs -sSf <span class="kw">|</span> <span class="kw">sh</span>;</code></pre>
 <h4 id="binaries">Binaries</h4>
@@ -67,6 +67,13 @@
 <p>You can narrow this down to a specific dependency with:</p>
 <pre class="sourceCode bash"><code class="sourceCode bash">    cargo doc --open --package foo</code></pre>
 <p>For crates not installed, you need to visit <a href="https://docs.rs/">docs.rs</a>.</p>
+<h2 id="learning-materials">Learning Materials</h2>
+<p>The definitive work appears to be <a href="https://doc.rust-lang.org/book/second-edition/">The Rust Programming Language</a>. This comes with the standard Rust installation so you do not have to be online to read.</p>
+<p>The Rust Tutorial has been deprecated in favour of the book and the <a href="https://rustbyexample.com/">Rust by Example</a> site has been down recently.</p>
+<p>There is a list of Rust tutorials (etc.) on <a href="https://hackr.io/tutorials/learn-rust">hackr.io</a>. None stand out.</p>
+<p>There is no Rust Wikibook.</p>
+<p>There are <a href="https://github.com/crazymykl/rust-koans">Rust Koans</a> on GitHub (there is another repository there). These appears to cover a reasonable number of topics. The respository dates from 2015 and the most recent commit was 2017 Q4.</p>
+<p>The <a href="http://exercism.io/languages/rust/about">Exercism Rust Track</a> has 79 exercises.</p>
 <hr />
 <p><em>mpl-rust</em> by NewForester. Notes licensed under a Creative Commons Attribution-ShareAlike 4.0 International Licence.</p>
 <!-- EOF -->
